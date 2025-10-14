@@ -1,3 +1,8 @@
+body {
+    font-family: 'Arial Narrow';
+    background-color: lightblue;
+}
+
 #canvas {
     border: 5px solid black;
     height: 500px;
@@ -13,11 +18,6 @@
     text-align: center;
     flex-direction: column;
     gap: 10px;
-}
-
-h1 {
-    color: blue;
-    font-family: Arial, Helvetica, sans-serif;
 }
 
 .imgcontainer {
@@ -91,10 +91,12 @@ h1 {
 
 .navbar ul {
     list-style-type: none;
-    background-color: grey;
+    background-color: lightpink;
     padding: 0px;
     margin: 0px;
     overflow: hidden;
+    border-radius: 5px;
+    text-align: center;
 }
 
 .navbar a {
@@ -103,12 +105,17 @@ h1 {
     padding: 15px;
     display: block;
     text-align: center;
+    display: inline-block;
 }
 
 .navbar a:hover {
-    background-color: blue;
+    background-color: lightcoral;
 }
 
 .navbar li {
-    float: left;
+    display: inline-block;
+}
+
+.form {
+    text-align: center;
 }

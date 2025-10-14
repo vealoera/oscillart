@@ -3,18 +3,34 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>Virgin Oscillart</title>
     <link href="style.css" rel="stylesheet"/>
     <link rel="icon" type="image/x-icon" href="virgin.ico"></a>
 </head>
 
 <body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="pureheroine.html">Pure Heroine</a></li>
+            <li><a href="melodrama.html">Melodrama</a></li>
+            <li><a href="solarpower.html">Solar Power</a></li>
+            <li><a href="virgin.html">Virgin</a></li>
+        </ul>
+    </nav>
+    
     <h1 style="text-align: center;">Virgin Oscillart</h1>
     <div id="container">
         <canvas id="canvas"></canvas>
         <input type="text" id="input">
         <button id="submit" onclick="handle()">Submit me why dontcha</button>
         <input type="color" id="color" value="#ff0000">
+        <select id="waveform">
+            <option value="sine">sine wave</option>
+            <option value="square">square wave</option>
+            <option value="triangle">triangle wave</option>
+            <option value="sawtooth">sawtooth wave</option>
+        </select>
         <input type="range" min="1" max="100" value="100" id="vol-slider">
         <button id="record" onclick="toggle()">Start recording</button>
     </div>

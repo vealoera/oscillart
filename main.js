@@ -4,13 +4,9 @@ const gainNode = audioCtx.createGain();
 const color_picker = document.getElementById('color');
 const vol_slider = document.getElementById('vol-slider');
 const recording_toggle = document.getElementById('record');
+const waveform_picker = document.getElementById('waveform');
 
-const oscillator = audioCtx.createOscillator();
-oscillator.connect(gainNode);
 gainNode.connect(audioCtx.destination);
-oscillator.type = "sine";
-oscillator.start();
-gainNode.gain.value = 0;
 
 var interval = null;
 var amplitude = 40;
@@ -32,8 +28,22 @@ notenames.set("A", 440);
 notenames.set("B", 493.9);
 
 function frequency(pitch) {
+    const oscillator = audioCtx.createOscillator();
+    oscillator.type = waveform_picker.value;
+    oscillator.frequency.setValueAtTime(pitch, audioCtx.currentTime);
+
+    const localGain = audioCtx.createGain();
+    localGain.gain.setValueAtTime(vol_slider.value / 100, audioCtx.currentTime)
+
+    oscillator.connect(localGain);
+    localGain.connect(audioCtx.destination);
+
+    oscillator.start();
+    oscillator.stop(audioCtx.currentTime + timepernote / 1000);
+
     freq = 0;
     freq = (pitch / 10000);
+    oscillator.type = waveform_picker.value;
     oscillator.frequency.setValueAtTime(pitch, audioCtx.currentTime);
     gainNode.gain.setValueAtTime(vol_slider.value, audioCtx.currentTime);
     gainNode.gain.setValueAtTime(0, audioCtx.currentTime + timepernote / 1000);
@@ -140,5 +150,20 @@ function toggle() {
         recording_toggle.innerHTML = "Stop Recording"; startRecording();
     } else {
         recording_toggle.innerHTML = "Start Recording"; recorder.stop();
+    }
+}
+
+function result() {
+    if (document.getElementById('pureheroine').checked) {
+        alert("pure heroine suits you the best!")
+    }
+    if (document.getElementById('melodrama').checked) {
+        alert("melodrama suits you the best!")
+    }
+    if (document.getElementById('solarpower').checked) {
+        alert("solar power suits you the best!")
+    }
+    if (document.getElementById('virgin').checked) {
+        alert("virgin suits you the best!")
     }
 }

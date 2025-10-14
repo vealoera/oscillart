@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lorde: Oscillart</title>
+    <title>Lorde Oscillart</title>
     <link href="style.css" rel="stylesheet"/>
     <link rel="icon" type="image/x-icon" href="lorde.ico"></a>
 </head>
@@ -12,22 +12,23 @@
     <nav class="navbar">
         <ul>
             <li><a href="index.html">Home</a></li>
-        </ul>
-        <ul>
             <li><a href="pureheroine.html">Pure Heroine</a></li>
-        </ul>
-        <ul>
             <li><a href="melodrama.html">Melodrama</a></li>
-        </ul>
-        <ul>
             <li><a href="solarpower.html">Solar Power</a></li>
-        </ul>
-        <ul>
             <li><a href="virgin.html">Virgin</a></li>
         </ul>
     </nav>
+
     <h1 style="text-align: center;">Lorde Oscillart</h1>
     <h2 style="text-align: center;">What Lorde Album Would You Like to Make Art to?</h2>
+    <div class="form">
+        <p style="text-align: center">Unsure what vibe suits you the best? Select the words that resonate the most to you!</p>
+        <input type="radio" name="album" id="pureheroine">young, blissful, angsty<br>
+        <input type="radio" name="album" id="melodrama">teenage, free, idk<br>
+        <input type="radio" name="album" id="solarpower">positive, go with the flow, tropical<br>
+        <input type="radio" name="album" id="virgin">vulnerable, raw, transparent<br>
+        <input type="button" name="check" value="give me an album!" onclick="result()">
+    </div>
 
     <div class="imgcontainer">
         <div class="imgbox">
