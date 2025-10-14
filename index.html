@@ -2,20 +2,64 @@
 <html>
 <head>
     <meta charset="UTF-8" />
-    <title>My site!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lorde: Oscillart</title>
     <link href="style.css" rel="stylesheet"/>
+    <link rel="icon" type="image/x-icon" href="lorde.ico"></a>
 </head>
+
 <body>
-    <input type="text" id="input">
-    <button id="submit" onclick="handle()">Submit me why dontcha</button>
-    <input type="color" id="color" value="#ff0000">
-    <input type="range" min="1" max="100" value="100" id="vol-slider">
-    <button id="record" onclick="toggle()">Start recording</button>
-    <div id="container">
-        <canvas id="canvas">
-            
-        </canvas>
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+        </ul>
+        <ul>
+            <li><a href="pureheroine.html">Pure Heroine</a></li>
+        </ul>
+        <ul>
+            <li><a href="melodrama.html">Melodrama</a></li>
+        </ul>
+        <ul>
+            <li><a href="solarpower.html">Solar Power</a></li>
+        </ul>
+        <ul>
+            <li><a href="virgin.html">Virgin</a></li>
+        </ul>
+    </nav>
+    <h1 style="text-align: center;">Lorde Oscillart</h1>
+    <h2 style="text-align: center;">What Lorde Album Would You Like to Make Art to?</h2>
+
+    <div class="imgcontainer">
+        <div class="imgbox">
+            <a href="pureheroine.html"><img src="images/pureheroine.jpeg" width="300"></a>
+            <div class="imgoverlay">
+                <div class="imgtitle">Pure Heroine</div>
+                <p class="imgdescription">Lorde's first album!</p>
+            </div>
+        </div>
+        <div class="imgbox">
+            <a href="melodrama.html"><img src="images/melodrama.png"></a>
+            <div class="imgoverlay">
+                <div class="imgtitle">Melodrama</div>
+                <p class="imgdescription">Lorde's second album!</p>
+            </div>
+        </div>
+        <div class="imgbox">
+            <a href="solarpower.html"><img src="images/solarpower.png" width="300"></a>
+            <div class="imgoverlay">
+                <div class="imgtitle">Solar Power</div>
+                <p class="imgdescription">Lorde's third album!</p>
+            </div>
+        </div>
+        <div class="imgbox">
+            <a href="virgin.html"><img src="images/virgin.png" width="300"></a>
+            <div class="imgoverlay">
+                <div class="imgtitle">Virgin</div>
+                <p class="imgdescription">Lorde's fourth album!</p>
+            </div>
+        </div>
     </div>
+    
     <script src="main.js"></script>
 </body>
 </html>

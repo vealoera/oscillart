@@ -32,11 +32,11 @@ notenames.set("A", 440);
 notenames.set("B", 493.9);
 
 function frequency(pitch) {
+    freq = 0;
     freq = (pitch / 10000);
-    gainNode.gain.setValueAtTime(vol_slider.value, audioCtx.currentTime);
-    setting = setInterval(() => {gainNode.gain.value = vol_slider.value}, 1);
     oscillator.frequency.setValueAtTime(pitch, audioCtx.currentTime);
-    setTimeout(() => {clearInterval(setting); gainNode.gain.value = 0;}, ((timepernote)-10));
+    gainNode.gain.setValueAtTime(vol_slider.value, audioCtx.currentTime);
+    gainNode.gain.setValueAtTime(0, audioCtx.currentTime + timepernote / 1000);
 }
 
 function handle() {
@@ -95,6 +95,7 @@ function line() {
     counter++;
     if (counter > (timepernote/20)) {
         clearInterval(interval);
+        freq = 0;
     }
 }
 
