@@ -1,10 +1,33 @@
 body {
     font-family: 'Arial Narrow';
+}
+
+#index {
     background-color: lightblue;
 }
 
+#pureheroine {
+    background-color: #181818;
+    color: #e9e9e9;
+}
+
+#melodrama {
+    background-color: #0033b2;
+    color: #ed944c;
+}
+
+#solarpower {
+    background-color: #bfd25a;
+    color: #934502;
+}
+
+#virgin {
+    background-color: #0c5a80;
+    color: #4b9dcc;
+}
+
 #canvas {
-    border: 5px solid black;
+    border: 5px solid white;
     height: 500px;
     width: 900px;
     margin-bottom: 2em;

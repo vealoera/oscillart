@@ -8,7 +8,7 @@
     <link rel="icon" type="image/x-icon" href="melodrama.ico"></a>
 </head>
 
-<body>
+<body id="melodrama">
     <nav class="navbar">
         <ul>
             <li><a href="index.html">Home</a></li>
@@ -20,10 +20,12 @@
     </nav>
 
     <h1 style="text-align: center;">Melodrama Oscillart</h1>
+    <p style="text-align: center;">Album Stats: Released at 20 | Most Played Song: Green Light</p>
+    <p style="text-align: center;">Don't know what to play? Here's the tune to Green Light! AAAAAAAGGGGFF</p><br>
     <div id="container">
         <canvas id="canvas"></canvas>
         <input type="text" id="input">
-        <button id="submit" onclick="handle()">Submit me why dontcha</button>
+        <button id="submit" onclick="handle()">play!</button>
         <input type="color" id="color" value="#ff0000">
         <select id="waveform">
             <option value="sine">sine wave</option>
